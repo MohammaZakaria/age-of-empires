@@ -1,0 +1,42 @@
+@import './../../style/_variables.scss';
+@import './../../style/mixins.scss';
+
+.pagination__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+    flex-direction: row;
+    @include for-phone-smaller-only {
+        flex-direction: column-reverse;
+        
+    }
+.pagination__rows__count {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
+}
+    .pagination__bar{
+        box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
+        padding: 0.4rem 0rem;
+        background-color: #fff;
+        display: inline-flex;
+        min-width: 17rem;
+        justify-content: space-around;
+        border-radius: 0.25rem;
+    .pagination__button{
+        border: none;
+        border-radius: 0.2rem;
+        margin: 0 0.2rem;
+        background-color: #eee;
+    }
+    .active{
+        background-color: #2196F3;
+    }
+}
+}
+
+
+  

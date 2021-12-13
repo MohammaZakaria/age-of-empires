@@ -1,0 +1,39 @@
+@import './../../style/_variables.scss';
+@import './../../style/mixins.scss';
+
+.toggles{
+
+    margin: 2rem 0 ;
+    .toggles__wrapper{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: row;
+    @include for-phone-smaller-only {
+        flex-direction: column;
+    }
+    flex-wrap: nowrap;
+    background-color: #fff;
+    .toggle__button{
+        border: none;
+        padding: 0.25rem 0.8rem;
+        font-weight: 500;
+        margin: 0.3rem 0.5rem;
+        font-size: 0.90rem;
+        border-radius: 0.4rem;
+    }
+    .active{
+        background-color: #2196F3;
+        color: #fff;
+    }
+    .inactive{
+        background-color: #eee;
+        color: $dark-color;
+    }
+}
+}
+.toggle__button:hover{
+    background-color: #ccc;
+}

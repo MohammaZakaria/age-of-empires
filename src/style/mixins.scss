@@ -1,0 +1,32 @@
+// 420px
+@mixin for-phone-smaller-only {
+    @media (max-width: 26.25rem) {
+      @content;
+    }
+  }
+// 600px
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 37.5rem) {
+      @content;
+    }
+  }
+// 900px
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 56.25rem) {
+      @content;
+    }
+  }
+// 1200px
+  @mixin for-desktop-up {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+// 1500px
+  @mixin for-desktop-1500-up {
+    @media (min-width: 93.75rem) {
+      @content;
+    }
+  }
+
+  

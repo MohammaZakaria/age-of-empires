@@ -1,0 +1,26 @@
+
+@import './../../style/_variables.scss';
+
+  .preloader__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20009;
+    background-color: #f3f3f3;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .loaded {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .table__row{
+    cursor: pointer;
+  }
+  

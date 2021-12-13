@@ -1,0 +1,10 @@
+@import './../../style/_variables.scss';
+
+.footer{
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem 0;
+    .footer__text{
+        font-weight: 500;
+        color: $dark-color;
+    }
+}
