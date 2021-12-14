@@ -4,7 +4,6 @@ const initialState = {
   empires: [],
 };
 
-// Slice
 const empiresSlice = createSlice({
   name: "empires",
   initialState,

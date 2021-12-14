@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { units } from "./../../data.json";
 
-// Slice
-const slice = createSlice({
+const unitDetailsSlice = createSlice({
   name: "unitDetails",
   initialState: {
     unit: null,
@@ -16,9 +15,9 @@ const slice = createSlice({
     },
   },
 });
-export default slice.reducer;
+export default unitDetailsSlice.reducer;
 // Actions
-const { setUnitSuccess } = slice.actions;
+const { setUnitSuccess } = unitDetailsSlice.actions;
 export const setUnit = (id) => async (dispatch) => {
   try {
     dispatch(setUnitSuccess(id));

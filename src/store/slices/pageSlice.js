@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-// Slice
-const slice = createSlice({
+
+const pageSlice = createSlice({
   name: "page",
   initialState: {
     pageTitle: null,
@@ -11,9 +11,9 @@ const slice = createSlice({
     },
   },
 });
-export default slice.reducer;
+export default pageSlice.reducer;
 // Actions
-const { setPageTitleSuccess } = slice.actions;
+const { setPageTitleSuccess } = pageSlice.actions;
 export const setPageTitle = (pageTitle) => async (dispatch) => {
   try {
     dispatch(setPageTitleSuccess(pageTitle));
