@@ -3,6 +3,7 @@ export const COLUMNS = [
     Header: "Id",
     Footer: "Id",
     accessor: "id",
+    disableSortBy: true,
   },
   {
     Header: "Name",
@@ -18,6 +19,7 @@ export const COLUMNS = [
     Header: "Cost",
     Footer: "Cost",
     accessor: "cost",
+    disableSortBy: true,
     Cell: ({ value }) => {
       let final = "";
       if (value) {

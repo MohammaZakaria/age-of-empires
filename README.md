@@ -1,4 +1,56 @@
-# Getting Started with Create React App
+# Age of Empires
+
+This is a website where user can see a collection of empires information in a data table user can filter and review empires and select one to goe the empire's single page
+The website hae three main pages like the following:
+
+- [x] Home page: that contain a hero section with explanation about Age Of Empires
+- [x] Units: in this page the user can see all empires in a table with the ability to expand the numbers of rows in the table and navigate throw the table using pagination,
+      data table enables user to sort list by name or age
+      in this page user can toggle to display a certain collection according to the desired age.
+      user has a numeric three slider with (min 0, max 200) "Food, Gold, Wood", the user can enable a slider and start filter b sliding to certain number, the list will be updated immediately while user is changing the value
+- [x] Age Unit Details: this page shows the details of the selected age from the table
+
+## Libraries and technologies used in this source code
+
+- `"@reduxjs/toolkit": "^1.6.2"`: state management system
+
+- `"redux": "^4.1.2"`: state management system
+
+- `"redux-thunk": "^2.4.1"`: state management system
+
+- `"react-redux": "^7.2.6",`: state management system
+
+- `"react-table": "^7.7.0"`: Create and control data table
+
+- `"bootstrap": "^5.1.3"`: create a responsive layout
+
+- `"react-bootstrap": "^2.0.3"`: create a responsive layout
+
+- `"react-bootstrap-icons": "^1.6.1"`: : to use bootstrap icons
+
+- `"sass": "^1.44.0"`: for writing styling script
+
+- `"@mui/material": "^5.2.3"`: for using pre built component (slider)
+
+- `"@testing-library/jest-dom": "^5.11.4"`: testing the code files
+
+- `"@testing-library/react": "^11.1.0"`: testing the code files
+
+- `"@testing-library/user-event": "^12.1.10"`: testing the code files
+
+- `"react-router-dom": "^6.0.2"`: use to navigate between pages
+
+## Future work can be done to improve the ui
+
+- [] add authentication functionality
+
+- [] add user reviews section in unit details to alow user to comment on a certain unit
+
+- [] more sections in home page to show statistics about empires, and more explanation about them
+
+- [] filtering functionality on each column on the data table in units page, so user can search by name, age, id or cost directly in the table
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

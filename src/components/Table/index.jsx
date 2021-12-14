@@ -1,12 +1,12 @@
 import React, { useMemo } from "react";
-import { useTable, usePagination } from "react-table";
+import { useTable, usePagination, useSortBy } from "react-table";
 import { COLUMNS } from "../../components/Table/Columns";
 import { PAGE_SIZES } from "../../utils/vars";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import * as Icon from "react-bootstrap-icons";
 import "./style.scss";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 const Table = () => {
   const navigate = useNavigate();
@@ -40,6 +40,7 @@ const Table = () => {
       columns,
       data,
     },
+    useSortBy,
     usePagination
   );
 
@@ -53,8 +54,26 @@ const Table = () => {
               {headerGroups.map((headerGroup) => (
                 <tr {...headerGroup.getHeaderGroupProps()}>
                   {headerGroup.headers.map((column) => (
-                    <th {...column.getHeaderProps()}>
-                      {column.render("Header")}
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                    >
+                      <Row className="flex align-items-center justify-between">
+                        <Col>
+                          <span>{column.render("Header")}</span>
+                        </Col>
+
+                        <Col style={{ textAlign: "right" }}>
+                          {column.isSorted ? (
+                            column.isSortedDesc ? (
+                              <Icon.SortDown color={"#fff"} />
+                            ) : (
+                              <Icon.SortUp color={"#fff"} />
+                            )
+                          ) : (
+                            <Icon.Filter color={"#fff"} />
+                          )}
+                        </Col>
+                      </Row>
                     </th>
                   ))}
                 </tr>
