@@ -1,3 +1,5 @@
+### github (MohammedZakaria2, MohammaZakaria)
+
 # Age of Empires Developed by Mohammed Alalaya
 
 This is a website where user can see a collection of empires information in a data table user can filter and review empires and select one to goe the empire's single page
@@ -12,8 +14,6 @@ The website hae three main pages like the following:
 - [x] Age Unit Details: this page shows the details of the selected age from the table
 
 ## Libraries and technologies used in this source code
-
-### github (MohammedZakaria2, MohammaZakaria)
 
 - `"@reduxjs/toolkit": "^1.6.2"`: state management system
 
