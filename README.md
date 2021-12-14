@@ -2,15 +2,15 @@
 
 # Age of Empires Developed by Mohammed Alalaya
 
-This is a website where user can see a collection of empires information in a data table user can filter and review empires and select one to goe the empire's single page
-The website hae three main pages like the following:
+This is a website where users can see a collection of empires information in a data table user can filter and review empires and select one to go the empire's single page
+The website has three main pages like the following:
 
-- [x] Home page: that contain a hero section with explanation about Age Of Empires
-- [x] Units: in this page the user can see all empires in a table with the ability to:
+- [x] Home page: that contains a hero section with an explanation about Age Of Empires
+- [x] Units: in this page, the user can see all empires in a table with the ability to:
   - Toggle to display a certain collection according to the desired age.
-  - User has a numeric slider with (min 0, max 200) "Food, Gold, Wood", the user can enable a slider and start filter sliding to certain number, **the list will be updated immediately while user is changing the value**
+  - User has a numeric slider with (min 0, max 200) "Food, Gold, Wood", the user can enable a slider and start filter sliding to a certain number, **the list will be updated immediately while the user is changing the value**
   - Expand or select the numbers of rows in the table. In addition to, pagination functionality,
-  - Data table enables user to sort list by name or age
+  - Data table enables users to sort the list by name or age
 - [x] Age Unit Details: this page shows the details of the selected age from the table
 
 ## Libraries and technologies used in this source code
@@ -45,13 +45,13 @@ The website hae three main pages like the following:
 
 ## Future work can be done to improve the ui
 
-- [] add authentication functionality
+- [ ] Add authentication functionality
 
-- [] add user reviews section in unit details to alow user to comment on a certain unit
+- [ ] Add user reviews section in unit details to allow users to comment on a certain unit
 
-- [] more sections in home page to show statistics about empires, and more explanation about them
+- [ ] More sections in the home page to show statistics about empires, and more explanation about them
 
-- [] filtering functionality on each column on the data table in units page, so user can search by name, age, id or cost directly in the table
+- [ ] Filtering functionality on each column on the data table in units page, so user can search by name, age, id or cost directly in the table
 
 ## Getting Started with Create React App
 
