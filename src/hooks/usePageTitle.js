@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setPageTitle } from "../store/slices/pageSlice";
 
 const usePageTitle = (title) => {
-  console.log("title :", title);
   const [currentTitle, setCurrentTitle] = useState(title);
   const dispatch = useDispatch();
 
@@ -16,7 +15,7 @@ const usePageTitle = (title) => {
     } catch (error) {
       console.log("error :", error);
     }
-  }, [currentTitle]);
+  }, [currentTitle, dispatch]);
   return [setCurrentTitle];
 };
 

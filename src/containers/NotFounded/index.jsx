@@ -6,6 +6,7 @@ const NotFounded = () => {
   const [setCurrentTitle] = usePageTitle();
   useEffect(() => {
     setCurrentTitle("Page not founded");
+    // eslint-disable-next-line
   }, []);
 
   return (

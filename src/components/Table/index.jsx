@@ -97,7 +97,9 @@ const Table = () => {
               value={pageSize}
             >
               {PAGE_SIZES.map((size) => (
-                <option value={size}>{size}</option>
+                <option key={size} value={size}>
+                  {size}
+                </option>
               ))}
             </select>
             <div className="align-items-center pagination__bar">

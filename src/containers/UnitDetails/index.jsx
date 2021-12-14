@@ -14,6 +14,7 @@ const UnitDetails = () => {
 
   useEffect(() => {
     setCurrentTitle(`${unit ? unit.name : "Not found"} unit details`);
+    // eslint-disable-next-line
   }, [unit]);
 
   useEffect(() => {

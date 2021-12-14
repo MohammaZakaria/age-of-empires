@@ -17,6 +17,7 @@ const Units = () => {
   const [setCurrentTitle] = usePageTitle();
   useEffect(() => {
     setCurrentTitle("Units");
+    // eslint-disable-next-line
   }, []);
 
   const handleChange = (event, newValue) => {

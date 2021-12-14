@@ -9,16 +9,17 @@ const Filters = ({ check, filteringItems, handleChange }) => {
     <div className="filters">
       <h3 className="section__title">Costs</h3>
       {Object.keys(filteringItems).map((item) => (
-        <Row key={item.label}>
+        <Row key={item}>
           <Col lg={5} md={8} sm={12}>
             <div className="flex align-items-center filters">
-              <label class="checkbox flex align-item-center">
+              <label className="checkbox flex align-item-center">
                 <input
                   type="checkbox"
+                  className="check_box"
                   onChange={() => check(item)}
                   checked={filteringItems[item].isFiltering ? "checked" : ""}
                 />
-                <span class="checkmark" />
+                <span className="checkmark" />
                 <span className="label__text">{item}</span>
               </label>
               <Slider
@@ -31,7 +32,7 @@ const Filters = ({ check, filteringItems, handleChange }) => {
                 max={SLIDER_MAX_VALUE}
                 valueLabelDisplay="auto"
               />
-              <span class="slider__value">
+              <span className="slider__value">
                 {filteringItems[item].value ? filteringItems[item].value : "-"}
               </span>
             </div>

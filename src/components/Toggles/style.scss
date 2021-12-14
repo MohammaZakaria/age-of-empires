@@ -15,6 +15,7 @@
         flex-direction: column;
     }
     flex-wrap: nowrap;
+    padding:  0 0.3rem;
     background-color: #fff;
     .toggle__button{
         border: none;
@@ -23,9 +24,10 @@
         margin: 0.3rem 0.5rem;
         font-size: 0.90rem;
         border-radius: 0.4rem;
+        width: 100%;
     }
     .active{
-        background-color: #2196F3;
+        background-color: $primary-color;
         color: #fff;
     }
     .inactive{
