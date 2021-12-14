@@ -27,7 +27,7 @@ export const COLUMNS = [
         final = Object.keys(value).map(
           (key, index) =>
             `${key}: ${value[key]}${
-              // add , according in the appropriate place according to the count of the keys and index
+              // add according in the appropriate place according to the count of the keys and index
               index < Object.keys(value).length - 1 ? ", " : ""
             }`
         );

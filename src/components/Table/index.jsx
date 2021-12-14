@@ -45,6 +45,33 @@ const Table = () => {
   );
 
   const { pageIndex, pageSize } = state;
+
+  const pagination = [
+    {
+      isDisabled: canPreviousPage,
+      handelClick: () => gotoPage(0),
+      icon: (
+        <Icon.ChevronDoubleLeft color={canPreviousPage ? "#fff" : "#555555"} />
+      ),
+    },
+    {
+      isDisabled: canPreviousPage,
+      handelClick: () => previousPage(),
+      icon: <Icon.ChevronLeft color={canPreviousPage ? "#fff" : "#555555"} />,
+    },
+    {
+      isDisabled: canNextPage,
+      handelClick: () => nextPage(),
+      icon: <Icon.ChevronRight color={canNextPage ? "#fff" : "#555555"} />,
+    },
+    {
+      isDisabled: canNextPage,
+      handelClick: () => gotoPage(pageCount - 1),
+      icon: (
+        <Icon.ChevronDoubleRight color={canNextPage ? "#fff" : "#555555"} />
+      ),
+    },
+  ];
   return (
     <>
       {empires.length > 0 ? (
@@ -122,47 +149,30 @@ const Table = () => {
               ))}
             </select>
             <div className="align-items-center pagination__bar">
-              <button
-                disabled={!canPreviousPage}
-                onClick={() => gotoPage(0)}
-                className={`pagination__button ${canPreviousPage && "active"}`}
-              >
-                <Icon.ChevronDoubleLeft
-                  color={canPreviousPage ? "#fff" : "#555555"}
-                />
-              </button>
-              <button
-                disabled={!canPreviousPage}
-                onClick={() => previousPage()}
-                className={`pagination__button ${canPreviousPage && "active"}`}
-              >
-                <Icon.ChevronLeft
-                  color={canPreviousPage ? "#fff" : "#555555"}
-                />
-              </button>
-              <div>
-                <p>
-                  <span>
-                    <strong> {pageIndex + 1} </strong> of {pageOptions.length}
-                  </span>
-                </p>
-              </div>
-              <button
-                disabled={!canNextPage}
-                onClick={() => nextPage()}
-                className={`pagination__button ${canNextPage && "active"}`}
-              >
-                <Icon.ChevronRight color={canNextPage ? "#fff" : "#555555"} />
-              </button>
-              <button
-                disabled={!canNextPage}
-                onClick={() => gotoPage(pageCount - 1)}
-                className={`pagination__button ${canNextPage && "active"}`}
-              >
-                <Icon.ChevronDoubleRight
-                  color={canNextPage ? "#fff" : "#555555"}
-                />
-              </button>
+              {pagination &&
+                pagination.map((page, index) => (
+                  <React.Fragment key={index}>
+                    <button
+                      disabled={!page.isDisabled}
+                      onClick={() => page.handelClick()}
+                      className={`pagination__button ${
+                        page.isDisabled && "active"
+                      }`}
+                    >
+                      {page.icon}
+                    </button>
+                    {index === 1 && (
+                      <div>
+                        <p>
+                          <span>
+                            <strong> {pageIndex + 1} </strong> of{" "}
+                            {pageOptions.length}
+                          </span>
+                        </p>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
             </div>
           </div>
         </>

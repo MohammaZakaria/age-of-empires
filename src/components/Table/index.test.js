@@ -59,6 +59,6 @@ test("Check table rows values", async () => {
   const spy = jest.spyOn(redux, "useSelector");
   spy.mockReturnValue({ empires: [...initRows] });
   render(<Table />);
-  screen.debug();
+  // screen.debug();
   expect(screen.queryAllByRole("row")).toHaveLength(initRows.length + 2);
 });
