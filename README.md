@@ -4,10 +4,11 @@ This is a website where user can see a collection of empires information in a da
 The website hae three main pages like the following:
 
 - [x] Home page: that contain a hero section with explanation about Age Of Empires
-- [x] Units: in this page the user can see all empires in a table with the ability to expand the numbers of rows in the table and navigate throw the table using pagination,
-      data table enables user to sort list by name or age
-      in this page user can toggle to display a certain collection according to the desired age.
-      user has a numeric three slider with (min 0, max 200) "Food, Gold, Wood", the user can enable a slider and start filter b sliding to certain number, the list will be updated immediately while user is changing the value
+- [x] Units: in this page the user can see all empires in a table with the ability to:
+  - in this page user can toggle to display a certain collection according to the desired age.
+  - user has a numeric slider with (min 0, max 200) "Food, Gold, Wood", the user can enable a slider and start filter sliding to certain number, **the list will be updated immediately while user is changing the value**
+  - Expand or select the numbers of rows in the table. In addition to, pagination functionality,
+  - Data table enables user to sort list by name or age
 - [x] Age Unit Details: this page shows the details of the selected age from the table
 
 ## Libraries and technologies used in this source code
